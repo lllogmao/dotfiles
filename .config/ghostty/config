@@ -1,0 +1,10 @@
+theme = Black Metal (Gorgoroth)
+
+font-size = 16
+font-family = IosevkaTerm NF
+cursor-style = block
+cursor-style-blink = false
+
+font-feature = -liga
+font-feature = -calt
+font-feature = -dlig
