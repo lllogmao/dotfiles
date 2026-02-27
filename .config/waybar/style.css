@@ -1,0 +1,82 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "FontAwesome", "Iosevka", monospace;
+    font-size: 16px;
+    padding: 0;
+}
+
+window#waybar {
+    background-color: #282828; 
+    color: #9B8D7F;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: none;
+    transition: none;
+}
+
+#workspaces button {
+    padding: 2px 4px;
+    color: #9B8D7F;
+    font-weight: 600;
+}
+
+#workspaces button:hover {
+    text-shadow: none;
+}
+
+#workspaces button.active {
+    background: #9B8D7F;
+    color: #404040;
+}
+
+#workspaces button.urgent {
+    background-color: #5F8787;
+}
+
+#custom-media,
+#pulseaudio,
+#cpu,
+#memory,
+#temperature,
+#clock,
+#network
+{
+  padding: 2px 8px;
+  color: #A89984;
+}
+
+#pulseaudio.muted {
+    background-color: #5F8787;
+    color: #C1C1C1;
+}
+
+#pulseaudio:hover {
+    background-color: #5F8787;
+    color: #C1C1C1;
+}
+
+#temperature.critical, 
+#network.disconnected 
+{
+    background-color: #5F8787;
+}
+
+#tray {
+    margin: 0 2px;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #5F8787;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 8px;
+}

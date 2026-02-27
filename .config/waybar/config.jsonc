@@ -1,0 +1,63 @@
+{
+    "position": "bottom",
+    "height": 0,
+    "spacing": 0, 
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "custom/media"
+    ],
+    "modules-right": [
+        "pulseaudio", 
+        "cpu",
+        "memory",
+        "temperature",	
+        "tray",
+        "clock",
+        "network"
+    ],
+    "custom/media": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 40,
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" 
+    },
+    "pulseaudio": {
+        "format": "vol {volume}%",
+        "format-bluetooth": "vol {volume}%",
+        "format-muted": "muted",
+        "on-click": "pavucontrol"
+    },
+    "cpu": {
+        "format": "cpu {usage}%",
+        "interval": 2
+    },
+    "memory": {
+        "format": "mem {}%",
+        "interval": 2
+    },
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "temp {temperatureC}°C",
+        "format": "temp {temperatureC}°C",
+        "interval": 5,
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10 
+    },
+    "clock": {
+        "format": "clock {:%d-%m-%Y %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "network": {
+        "format-ethernet": "eth {bandwidthDownBits}",
+        "format-disconnected": "no network",
+        "interval": 5,
+        "tooltip": false
+    }
+}
