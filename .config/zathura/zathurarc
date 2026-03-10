@@ -1,0 +1,14 @@
+# Set the default backend to MuPDF
+set pdf-mupdf true
+
+# Adjust page to fit width on open
+set adjust-open "fit-width"
+
+# Set default zoom level (100%)
+set zoom 1.0
+
+# Set bookmark file path
+set bookmark-path "~/.config/zathura/bookmarks"
+
+# Enable inverse search with Emacs
+set synctex-editor-command "emacsclient --no-wait +%{line} %{input}"

@@ -1,0 +1,71 @@
+{
+    "position": "bottom",
+    "height": 0,
+    "spacing": 0, 
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "custom/media"
+    ],
+    "modules-right": [
+        "pulseaudio", 
+        "cpu",
+        "memory",
+        "temperature",	
+        "tray",
+        "clock#date",
+        "clock#time",
+        "network"
+    ],
+    "custom/media": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 60,
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" 
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "interval": 2
+    },
+    "memory": {
+        "format": " {}%",
+        "interval": 2
+    },
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "temp {temperatureC}°C",
+        "format": " {temperatureC}°C",
+        "interval": 5,
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10 
+    },
+    "clock#date": {
+        "format": " {:%d-%m-%Y}",
+        "tooltip": false
+    },
+    "clock#time": {
+        "format": " {:%H:%M}",
+        "tooltip": false
+    },
+    "network": {
+        "format-ethernet": " {bandwidthDownBits}",
+        "format-disconnected": "no network",
+        "interval": 5,
+        "tooltip": false
+    }
+}
