@@ -47,6 +47,6 @@ alias waybar-reload="pkill waybar && hyprctl dispatch exec waybar"
 
 alias ff=fastfetch
 
-alias mu="cd ~/Documents/Massey-University-2026"
+alias mu="cd ~/Documents/MU-OUTPUT-2026"
 
 export PATH="$HOME/.config/emacs/bin:$PATH"
