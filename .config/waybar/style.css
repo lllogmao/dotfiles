@@ -1,0 +1,83 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "FontAwesome", "Iosevka", monospace;
+    font-size: 16px;
+    padding: 0;
+}
+
+window#waybar {
+    background-color: #3C3836;
+    color: #F5F5F5;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: none;
+    transition: none;
+}
+
+#workspaces button {
+    font-size: 18px;
+    padding: 2px 4px;
+    color: #F5F5F5;
+    font-weight: 600;
+}
+
+#workspaces button:hover {
+    text-shadow: none;
+}
+
+#workspaces button.active {
+    background-color: #FBF1C7;
+    color: #3C3836;
+}
+
+#workspaces button.urgent {
+    background-color: #CC241D;
+}
+
+#custom-media,
+#pulseaudio,
+#cpu,
+#memory,
+#temperature,
+#clock,
+#network
+{
+  padding: 2px 8px;
+  color: #F5F5F5;
+}
+
+#pulseaudio.muted {
+    background-color: #CC241D;
+    color: #F5F5F5;
+}
+
+#pulseaudio:hover {
+    background-color: #CC241D;
+    color: #F5F5F5;
+}
+
+#temperature.critical, 
+#network.disconnected 
+{
+    background-color: #CC241D;
+}
+
+#tray {
+    margin: 0 2px;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #CC241D;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 8px;
+}

@@ -1,0 +1,10 @@
+theme = Gruvbox Light
+
+font-size = 14
+font-family = IosevkaTerm NF
+cursor-style = block
+cursor-style-blink = false
+
+font-feature = -liga
+font-feature = -calt
+font-feature = -dlig
